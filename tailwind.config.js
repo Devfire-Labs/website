@@ -1,9 +1,5 @@
 module.exports = {
 	mode: 'jit',
-	// future: {
-	// 	purgeLayersByDefault: true,
-	// 	removeDeprecatedGapUtilities: true,
-	// },
 	purge: [
 		'./src/**/*.svelte',
 		// may also want to include HTML files
