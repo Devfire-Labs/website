@@ -3,7 +3,13 @@
 </main>
 
 <style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	body {
+		@apply font-mono bg-light;
+	}
+	::selection {
+		@apply text-dark  bg-fire-1 bg-opacity-60;
+	}
 </style>
