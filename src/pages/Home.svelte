@@ -8,7 +8,7 @@
 
 <div id="home">
 	<Hero />
-	<Cta />
 	<ScrollingTitle />
 	<HomeSection title="our work" content={ourWork} />
+	<Cta />
 </div>

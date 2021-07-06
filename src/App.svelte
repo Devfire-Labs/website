@@ -3,6 +3,7 @@
 	import Blog from './components/Blog.svelte';
 	import Navbar from './components/Navbar.svelte';
 	import Home from './pages/Home.svelte';
+	import Footer from './components/Footer.svelte';
 </script>
 
 <Router path="/">
@@ -13,6 +14,7 @@
 			<Blog postId={router.params.postId} />
 		</Route>
 		<Route fallback>Not found</Route>
+		<Footer />
 	</main>
 </Router>
 
@@ -34,5 +36,8 @@
 	}
 	.post-text {
 		@apply font-sans mt-2;
+	}
+	.link {
+		@apply mt-2 font-sans font-light text-white;
 	}
 </style>
