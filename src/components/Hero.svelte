@@ -5,7 +5,7 @@
 		<img
 			src="/assets/click.svg"
 			alt="A pointer"
-			class="filter drop-shadow-lg absolute bottom-9 left-28"
+			class="filter drop-shadow-lg absolute bottom-12 left-44"
 		/>
 		<br /> away.
 	</h1>

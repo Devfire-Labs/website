@@ -1,19 +1,20 @@
 <script>
-	import Cta from './components/CTA.svelte';
-	import Hero from './components/Hero.svelte';
-	import HomeSection from './components/HomeSection.svelte';
+	import { Router, Route, Link, router } from 'yrv/debug';
+	import Blog from './components/Blog.svelte';
 	import Navbar from './components/Navbar.svelte';
-	import ScrollingTitle from './components/ScrollingTitle.svelte';
-	import { ourwork } from './OurWorkContent';
+	import Home from './pages/Home.svelte';
 </script>
 
-<main class="container">
-	<Navbar />
-	<Hero />
-	<Cta />
-	<ScrollingTitle />
-	<HomeSection title="our work" content={ourwork} />
-</main>
+<Router path="/">
+	<main class="container">
+		<Navbar />
+		<Route exact><Home /></Route>
+		<Route path="/blog/:postId" let:router>
+			<Blog postId={router.params.postId} />
+		</Route>
+		<Route fallback>Not found</Route>
+	</main>
+</Router>
 
 <style global>
 	@tailwind base;
@@ -27,5 +28,11 @@
 	}
 	main.container {
 		@apply w-full;
+	}
+	.post-subtitle {
+		@apply font-sans font-semibold text-xl mt-3.5;
+	}
+	.post-text {
+		@apply font-sans mt-2;
 	}
 </style>

@@ -20,7 +20,7 @@ function serve() {
 			if (server) return;
 			server = require('child_process').spawn(
 				'npm',
-				['run', 'start', '--', '--dev --host'],
+				['run', 'start', '--', '--dev'],
 				{
 					stdio: ['ignore', 'inherit', 'inherit'],
 					shell: true,
@@ -52,12 +52,6 @@ export default {
 				postcss: true,
 			}),
 
-			// preprocess: sveltePreprocess({
-			// 	sourceMap: !production,
-			// 	postcss: {
-			// 		plugins: [require('tailwindcss'), require('autoprefixer')],
-			// 	},
-			// }),
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
