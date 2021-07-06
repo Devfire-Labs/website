@@ -1,5 +1,18 @@
-<main>
-	<h1 class="text-fire-1 text-center text-2xl"><strong>devfire</strong>labs</h1>
+<script>
+	import Cta from './components/CTA.svelte';
+	import Hero from './components/Hero.svelte';
+	import HomeSection from './components/HomeSection.svelte';
+	import Navbar from './components/Navbar.svelte';
+	import ScrollingTitle from './components/ScrollingTitle.svelte';
+	import { ourwork } from './OurWorkContent';
+</script>
+
+<main class="container">
+	<Navbar />
+	<Hero />
+	<Cta />
+	<ScrollingTitle />
+	<HomeSection title="our work" content={ourwork} />
 </main>
 
 <style global>
@@ -7,9 +20,12 @@
 	@tailwind components;
 	@tailwind utilities;
 	body {
-		@apply font-mono bg-light;
+		@apply font-mono bg-light antialiased;
 	}
 	::selection {
 		@apply text-dark  bg-fire-1 bg-opacity-60;
+	}
+	main.container {
+		@apply w-full;
 	}
 </style>
