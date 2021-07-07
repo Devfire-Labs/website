@@ -1,12 +1,12 @@
 <script>
 	import { Link } from 'yrv';
+	import { menu } from '../stores/menu';
+import Logo from './Logo.svelte';
 </script>
 
 <nav class="bg-light pt-7 px-5 pb-2 flex justify-between items-center">
-	<Link href="/"
-		><img src="/assets/logo.svg" alt="The DevFire Labs logo" class="" /></Link
-	>
-	<button class=""
+<Logo/>
+	<button on:click={menu.toggle}
 		><img src="/assets/menu-icon.svg" alt="A menu icon" class="" /></button
 	>
 </nav>

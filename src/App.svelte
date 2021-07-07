@@ -1,18 +1,22 @@
 <script>
 	import { Router, Route, Link, router } from 'yrv/debug';
-	import Blog from './components/Blog.svelte';
+	import Blog from './pages/BlogPost.svelte';
 	import Navbar from './components/Navbar.svelte';
 	import Home from './pages/Home.svelte';
 	import Footer from './components/Footer.svelte';
+	import Menu from './components/Menu.svelte';
+	import HitUsUp from './pages/HitUsUp.svelte';
 </script>
 
 <Router path="/">
 	<main class="container">
+		<Menu />
 		<Navbar />
 		<Route exact><Home /></Route>
-		<Route path="/blog/:postId" let:router>
+		<Route exact path="/blog/:postId" let:router>
 			<Blog postId={router.params.postId} />
 		</Route>
+		<Route exact path="/hit-us-up"><HitUsUp /></Route>
 		<Route fallback>Not found</Route>
 		<Footer />
 	</main>
@@ -36,8 +40,5 @@
 	}
 	.post-text {
 		@apply font-sans mt-2;
-	}
-	.link {
-		@apply mt-2 font-sans font-light text-white;
 	}
 </style>
