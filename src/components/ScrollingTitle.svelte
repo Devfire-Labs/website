@@ -31,7 +31,7 @@
 		width: 100%;
 		overflow: hidden;
 		position: relative;
-		margin-top: .8rem;
+		margin-top: 0.8rem;
 	}
 
 	.carousel-inner {

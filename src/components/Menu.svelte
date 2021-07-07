@@ -7,7 +7,7 @@
 
 	// $: console.log($router);
 	router.subscribe((e) => {
-	console.log(e);
+		console.log(e);
 	});
 </script>
 
