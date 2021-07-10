@@ -1,5 +1,5 @@
 <script>
-	import Cta from '../components/CTA.svelte';
+	import CTA from '../components/CTA.svelte';
 	import Hero from '../components/Hero.svelte';
 	import HomeSection from '../components/HomeSection.svelte';
 	import ScrollingTitle from '../components/ScrollingTitle.svelte';
@@ -10,5 +10,5 @@
 	<Hero />
 	<ScrollingTitle />
 	<HomeSection title="our work" content={ourWork} />
-	<Cta />
+	<CTA float={true} />
 </div>

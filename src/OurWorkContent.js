@@ -6,6 +6,7 @@ const ourWork = [
 		},
 		title: 'Nike’s web app',
 		body: 'Making the Nike’s website experience <i>swoosh</i>.',
+		date: new Date(),
 	},
 	{
 		img: {
@@ -14,6 +15,7 @@ const ourWork = [
 		},
 		title: 'Nike’s web app',
 		body: 'Making the Nike’s website experience <i>swoosh</i>.',
+		date: new Date(),
 	},
 	{
 		img: {
@@ -22,8 +24,10 @@ const ourWork = [
 		},
 		title: 'Nike’s web app',
 		body: 'Making the Nike’s website experience <i>swoosh</i>.',
+		date: new Date(),
 	},
 ];
+
 const ourWorkPosts = [
 	{
 		type: 'Website',

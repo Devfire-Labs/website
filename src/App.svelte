@@ -1,11 +1,12 @@
 <script>
 	import { Router, Route, Link, router } from 'yrv/debug';
-	import Blog from './pages/BlogPost.svelte';
+	import BlogPost from './pages/BlogPost.svelte';
 	import Navbar from './components/Navbar.svelte';
 	import Home from './pages/Home.svelte';
 	import Footer from './components/Footer.svelte';
 	import Menu from './components/Menu.svelte';
 	import HitUsUp from './pages/HitUsUp.svelte';
+	import Blog from './pages/Blog.svelte';
 </script>
 
 <Router path="/">
@@ -13,10 +14,11 @@
 		<Menu />
 		<Navbar />
 		<Route exact><Home /></Route>
-		<Route exact path="/blog/:postId" let:router>
-			<Blog postId={router.params.postId} />
+		<Route exact path="/blog"><Blog /></Route>
+		<Route path="/blog/:postId" let:router>
+			<BlogPost postId={router.params.postId} />
 		</Route>
-		<Route exact path="/hit-us-up"><HitUsUp /></Route>
+		<Route path="/hit-us-up"><HitUsUp /></Route>
 		<Route fallback>Not found</Route>
 		<Footer />
 	</main>
@@ -35,10 +37,15 @@
 	main.container {
 		@apply w-full;
 	}
+	.title {
+		@apply text-2xl font-display;
+	}
 	.post-subtitle {
 		@apply font-sans font-semibold text-xl mt-3.5;
 	}
 	.post-text {
 		@apply font-sans mt-2;
 	}
+
+.container {}
 </style>

@@ -23,7 +23,9 @@
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
 	},
 	"dependencies": {
+		"@tailwindcss/forms": "^0.3.3",
 		"@tailwindcss/line-clamp": "^0.2.1",
+		"dayjs": "^1.10.6",
 		"sirv-cli": "^1.0.0",
 		"yrv": "0.0.47"
 	}

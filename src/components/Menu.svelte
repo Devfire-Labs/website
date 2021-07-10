@@ -27,7 +27,7 @@
 	<div class="ml-8 mt-6 bg-light">
 		<Link href="" class="menu-item">Our Work</Link>
 		<Link href="" class="menu-item">About</Link>
-		<Link href="" class="menu-item">Blog</Link>
+		<Link href="/blog" class="menu-item">Blog</Link>
 	</div>
 
 	<Link href="/hit-us-up" class="contact-us">

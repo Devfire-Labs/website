@@ -6,9 +6,9 @@
 	console.log('Post: ', post);
 </script>
 
-<div class="post-container mt-7">
+<div class="container mt-7">
 	<div class="px-4">
-		<h1 class="font-display text-2xl">{title}</h1>
+		<h1 class="title">{title}</h1>
 		<h2 class="font-mono font-bold text-xl">{type}</h2>
 	</div>
 	<div class="scrolling-wrapper">
