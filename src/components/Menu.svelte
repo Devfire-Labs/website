@@ -5,7 +5,6 @@
 	import SocialIcons from './SocialIcons.svelte';
 	import Logo from './Logo.svelte';
 
-	// $: console.log($router);
 	router.subscribe((e) => {
 		console.log(e);
 	});
@@ -18,7 +17,7 @@
 </script>
 
 <div class="menu" class:open={$menu} id="menu" transition:fade>
-	<div class="flex items-center justify-between mt-7 mx-5 pb-2 ">
+	<div class="flex items-center justify-between pb-2 mx-5 mt-7 ">
 		<Logo on:click={menu.toggle} />
 		<div class="flex items-center">
 			<button class=""

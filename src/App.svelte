@@ -8,6 +8,7 @@
 	import HitUsUp from './pages/HitUsUp.svelte';
 	import Blog from './pages/Blog.svelte';
 	import BlogPost from './pages/BlogPost.svelte';
+	import AboutUs from './pages/AboutUs.svelte';
 </script>
 
 <Router path="/">
@@ -23,6 +24,7 @@
 			<Project postId={router.params.postId} />
 		</Route>
 		<Route path="/hit-us-up"><HitUsUp /></Route>
+		<Route exact path="/about"><AboutUs /></Route>
 		<Route fallback>Not found</Route>
 		<Footer />
 	</main>
