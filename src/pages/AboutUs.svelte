@@ -58,7 +58,7 @@
     We seem good people, right? If you want to work with us, check out our
     career opportunities.
   </p>
-  <Cta />
+  <div class="py-4 pb-6"><Cta /></div>
 </div>
 
 <style>
