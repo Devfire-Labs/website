@@ -3,7 +3,12 @@
 	export let float;
 </script>
 
-<Link href="/hit-us-up" button class={'cta ' + (float && 'float')}>
+<Link
+	href="/hit-us-up"
+	button
+	class={'cta ' + (float && 'float')}
+
+>
 	<span class="hmu">HIT</span> <span class="hmu">US</span>
 	<span class="hmu">UP</span>
 </Link>
@@ -21,5 +26,6 @@
 	}
 	:global(.float) {
 		@apply sticky bottom-3.5 right-3.5 ml-auto mb-4 z-30 block;
+		top: -1px;
 	}
 </style>

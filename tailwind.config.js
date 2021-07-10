@@ -9,7 +9,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			mono: ['Ubuntu Mono', 'monospace'],
-			sans: ['Montserrat', 'sans-serif'],
+			sans: ['Ubuntu', 'sans-serif'],
 			display: ['Righteous', 'cursive'],
 		},
 		extend: {

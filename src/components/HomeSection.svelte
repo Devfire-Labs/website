@@ -4,9 +4,15 @@
 	export let title, content;
 </script>
 
-<section class="px-5 mt-4">
+<section class="px-5 mt-6">
 	<h2 class="font-bold text-3xl">{title}</h2>
 	{#each content as post, i (i)}
-		<HomeSectionCard {post} id={i} />
+		<HomeSectionCard {post} section={title} id={i} />
 	{/each}
 </section>
+
+<style>
+	.card + .card {
+		@apply mt-5;
+	}
+</style>

@@ -9,6 +9,12 @@
 	router.subscribe((e) => {
 		console.log(e);
 	});
+
+	const options = [
+		{ name: 'Our Work', href: '/ourwork' },
+		{ name: 'About', href: '/about' },
+		{ name: 'Blog', href: '/blog' },
+	];
 </script>
 
 <div class="menu" class:open={$menu} id="menu" transition:fade>
@@ -25,12 +31,12 @@
 	</div>
 
 	<div class="ml-8 mt-6 bg-light">
-		<Link href="" class="menu-item">Our Work</Link>
-		<Link href="" class="menu-item">About</Link>
-		<Link href="/blog" class="menu-item">Blog</Link>
+		{#each options as { name, href }, i (i)}
+			<Link {href} class="menu-item" on:click={menu.toggle}>{name}</Link>
+		{/each}
 	</div>
 
-	<Link href="/hit-us-up" class="contact-us">
+	<Link href="/hit-us-up" class="contact-us" on:click={menu.toggle}>
 		Contact Us<img src="/assets/msg-icon.svg" alt="" class="msg-icon" />
 	</Link>
 
