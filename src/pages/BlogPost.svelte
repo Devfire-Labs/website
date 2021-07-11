@@ -1,35 +1,25 @@
 <script>
-	import { ourWorkPosts as posts } from '../OurWorkContent';
+	import { blog } from '../utils';
+	import dayjs from 'dayjs';
 	export let postId;
-	const post = posts[postId];
-	const { title, type, body, imgCarousel } = post;
-	console.log('Post: ', post);
+	const { img, author, title, body, date } = blog[postId];
+	$: console.log(postId);
 </script>
 
-<div class="container mt-7">
-	<div class="px-4">
-		<h1 class="title">{title}</h1>
-		<h2 class="font-mono font-bold text-xl">{type}</h2>
+<div class="mt-7 px-4">
+	<h2 class="font-sans font-medium text-xl">{title}</h2>
+	<div class="flex items-center font-sans font-light mt-3">
+		<img
+			src={author.img.src}
+			alt={author.img.alt}
+			class="rounded-full w-9 h-9"
+		/>
+		<p class="ml-2">{author.name}</p>
+		<span class="font-bold mx-2"> &middot; </span>
+		{dayjs(date).format('DD MMMM, YYYY')}
 	</div>
-	<div class="scrolling-wrapper">
-		{#each imgCarousel as { src, alt }, i (i)}
-			<img {src} {alt} class="thumbnail" />
-		{/each}
-	</div>
-	<p class=" font-mono my-3 px-4">{@html body}</p>
+
+	<img src={img.src} alt={img.alt} class="mt-5" />
+
+	<p class="font-sans mt-5 mb-4 leading-8">{@html body}</p>
 </div>
-
-<style>
-	.scrolling-wrapper {
-		-webkit-overflow-scrolling: touch;
-		@apply flex flex-nowrap overflow-x-auto;
-	}
-
-	.scrolling-wrapper::-webkit-scrollbar {
-		display: none;
-	}
-
-	.thumbnail {
-		@apply object-contain w-full mt-2;
-	}
-</style>
