@@ -17,6 +17,7 @@
 	</header>
 	<form
 		class="bg-fire-1 mt-7 py-4 px-5"
+		netlify
 		on:submit={(e) => {
 			e.preventDefault();
 			console.log(form);
