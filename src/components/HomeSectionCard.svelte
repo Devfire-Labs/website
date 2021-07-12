@@ -7,27 +7,32 @@
 
 <div class="project-card">
   <Link href={`/blog/${id}`}>
-    <img src={img.src} alt={img.alt} class="" />
+    <img src={img.src} alt={img.alt} class="object-fill w-full" />
 
-    <div class="md:relative md:-mt-36 ">
-      <div class="md:p-6 ">
+    <div class="md:relative md:-mt-44 ">
+      <div class="md:pb-8 md:pl-6 md:pt-2">
         <h3
-          class="mt-2 text-2xl md:text-6xl md:text-white md:absolute md:wrapper font-display"
+          class="text-2xl md:mt-0 md:text-6xl md:text-white md:absolute md:wrapper font-display"
         >
           {title}
         </h3>
         <p
-          class="md:text-2xl md:text-white md:relative font-mono text-lg mt-1.5 md:mt-20"
-        />
+          class="md:text-2xl md:text-white md:relative font-mono text-lg mt-1.5 md:mt-16"
+        >
+          {@html body}
+        </p>
+
+        <a href="#" class="md:text-white md:font-bold md:text-2xl">
+          Read more <span class="text-fire-1">...</span>
+        </a>
       </div>
     </div>
-    {@html body}
   </Link>
 </div>
 
 <style>
   .project-card {
-    @apply mt-5;
+    @apply mt-5 md:mt-10 md:ml-3 md:mr-3;
   }
 
   /* .text-position {
