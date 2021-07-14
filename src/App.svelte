@@ -9,6 +9,7 @@
 	import Blog from './pages/Blog.svelte';
 	import BlogPost from './pages/BlogPost.svelte';
 	import AboutUs from './pages/AboutUs.svelte';
+	import OurWork from './pages/OurWork.svelte';
 </script>
 
 <Router path="/">
@@ -17,12 +18,14 @@
 		<Navbar />
 		<Route exact><Home /></Route>
 		<Route exact path="/blog"><Blog /></Route>
-		<Route path="/ourwork/:postId" let:router>
-			<Project postId={router.params.postId} />
-		</Route>
 		<Route path="/blog/:postId" let:router>
 			<BlogPost postId={router.params.postId} />
 		</Route>
+		<Route exact path="/ourwork"><OurWork /></Route>
+		<Route path="/ourwork/:postId" let:router>
+			<Project postId={router.params.postId} />
+		</Route>
+
 		<Route path="/hit-us-up"><HitUsUp /></Route>
 		<Route exact path="/about"><AboutUs /></Route>
 		<Route fallback>Not found</Route>
