@@ -18,6 +18,7 @@ module.exports = {
 				'fire-2': '#953DBA',
 				light: '#B9B9B9',
 				dark: '#25262A',
+				onix: '#505050',
 
 				deepgray: '#797979',
 				scroll: '#555',
