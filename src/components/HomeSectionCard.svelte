@@ -6,7 +6,7 @@
 </script>
 
 <div class="project-card">
-  <Link href={`/blog/${id}`}>
+  <Link href={`/ourwork/${id}`} class="">
     <img src={img.src} alt={img.alt} class="object-fill w-full" />
 
     <div class="md:relative md:-mt-44 ">
@@ -32,7 +32,7 @@
 
 <style>
   .project-card {
-    @apply mt-5 md:mt-10 md:ml-3 md:mr-3;
+    @apply mt-5 md:mt-4 md:mb-8 md:ml-3 md:mr-3;
   }
 
   /* .text-position {
