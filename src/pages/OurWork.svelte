@@ -4,7 +4,7 @@
 </script>
 
 <div class="ourwork pl-4">
-	<h1 class=" text-4xl font-display mt-16">Our Work</h1>
+	<h1 class="title">Our Work</h1>
 	<p class="font-mono pr-4">
 		What we’re up to; what we’re into. If you suffer from FOMO, check out below.
 	</p>

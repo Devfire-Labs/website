@@ -47,7 +47,7 @@
 		@apply w-full;
 	}
 	.title {
-		@apply text-2xl font-display;
+		@apply text-4xl font-display mt-16;
 	}
 	.post-subtitle {
 		@apply font-sans font-semibold text-xl mt-3.5;
