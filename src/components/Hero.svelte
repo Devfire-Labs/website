@@ -1,4 +1,4 @@
-<section class="mt-4">
+<section class="mt-12">
   <div class="md:flex-row md:flex">
     <h1 class="relative pl-6 text-6xl font-display md:text-6xl md:relative">
       Reliable software solutions, <br /> a
