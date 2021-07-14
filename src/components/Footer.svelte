@@ -1,6 +1,6 @@
 <script>
   import { Link } from "yrv";
-  import SocialIcons from "./SocialIcons.svelte";
+  import SocialIconsLight from "./SocialIconsLight.svelte";
 </script>
 
 <div class="footer">
@@ -11,7 +11,7 @@
   />
 
   <div class="mt-9">
-    <SocialIcons />
+    <SocialIconsLight />
   </div>
 
   <div class="flex flex-col items-start pt-2">
@@ -32,7 +32,7 @@
 
 <style>
   .footer {
-    @apply bg-deepGrey pt-6 pl-6 pb-4 text-black;
+    @apply bg-deepgray pt-6 pl-6 pb-4 text-white;
   }
   .subtitle {
     @apply text-2xl font-display mt-4;

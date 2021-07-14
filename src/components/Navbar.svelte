@@ -6,6 +6,7 @@
 
 <nav class="flex items-center justify-between px-5 pb-2 bg-light pt-7">
   <Logo />
+  <div class=""><a href="" /></div>
   <button on:click={menu.toggle}
     ><img src="/assets/menu-icon.svg" alt="A menu icon" class="" /></button
   >
