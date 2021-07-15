@@ -3,7 +3,7 @@
   import SocialIconsLight from "./SocialIconsLight.svelte";
 </script>
 
-<div class="footer md:flex md:justify-between md:align-top">
+<div class="w-full footer md:flex md:justify-between md:align-top">
   <!-- newsletter section -->
   <div class="hidden md:block lg:px-6 lg:mt-0 lg:mb-4">
     <h1 class="inline-block pb-5 text-2xl md:pb-3 font-display md:px-0">
