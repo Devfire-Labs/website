@@ -18,30 +18,34 @@
     >
   </div>
 
+  <!-- Logo -->
   <img
     src="/assets/FireLogoAlone.svg"
     alt="The DevFire Labs logo"
     class="block md:hidden"
   />
 
+  <!-- social Icons -->
   <div class="mt-9 md:flex-col md:items-center md:hidden">
     <h1 class="pb-5 text-2xl font-display ">Follow Us:</h1>
     <SocialIconsLight />
   </div>
 
+  <!-- company -->
   <div class="flex flex-col items-start pt-2 md:pt-0 md:mr-30">
     <h1 class="subtitle">Company</h1>
     <Link href="/about" class="footer-link">About Us</Link>
     <Link href="" class="footer-link">Contact & Support</Link>
   </div>
 
+  <!-- services -->
   <div class="flex flex-col items-start pt-2 md:mr-15 md:pt-0">
     <h1 class="subtitle">Services</h1>
     <Link href="" class="footer-link">Services</Link>
     <Link href="" class="footer-link">Portfolio</Link>
   </div>
 
-  <div class="hidden mt-9 md:mt-4 md:pr-10 md:flex-col md:flex md:items-center">
+  <div class="socials">
     <h1 class="pb-5 text-2xl font-display ">Follow us:</h1>
     <SocialIconsLight />
   </div>
@@ -54,21 +58,34 @@
   </div>
 </div>
 
-<div class="justify-between hidden md:flex md:bg-onix">
+<div class="hiddenBox">
   <img
     src="/assets/logolightwhite.svg"
     alt="The DevFire Labs logo"
-    class="md:m-3 md:px-3"
+    class="items-start align-middle md:m-3 md:px-0"
   />
-  <a href="" class="font-sans text-lg font-light text-white">
-    Cookie & Privacy Policy
-  </a>
-  <h1 class="font-sans font-light text-white text-md">
-    © 2021 DevFire Labs All rights reserved.
-  </h1>
+
+  <a href="" class="cookies"> Cookie & Privacy Policy </a>
+  <h1 class="rights">© 2021 DevFire Labs All rights reserved.</h1>
 </div>
 
 <style>
+  .cookies {
+    @apply font-sans text-sm font-light text-white md:mt-7 md:ml-20;
+  }
+
+  .hiddenBox {
+    @apply hidden md:justify-between md:flex md:bg-onix;
+  }
+
+  .socials {
+    @apply hidden mt-9 md:mt-4 md:pr-10 md:flex-col md:flex md:items-center;
+  }
+
+  .rights {
+    @apply font-sans text-sm font-light text-white md:mt-7 md:pr-4 md:-ml-12;
+  }
+
   .footer {
     @apply bg-deepgray pt-6 pl-6 pb-4 text-white;
   }
