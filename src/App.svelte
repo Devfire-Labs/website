@@ -44,7 +44,7 @@
     @apply text-dark  bg-fire-1 bg-opacity-60;
   }
   main.container {
-    @apply max-w-max;
+    @apply w-full;
   }
   .title {
     @apply text-4xl font-display mt-16;
