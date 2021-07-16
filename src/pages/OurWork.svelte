@@ -5,12 +5,12 @@
 
 <div class="ourwork pl-4">
 	<h1 class="title">Our Work</h1>
-	<p class="font-mono pr-4">
+	<p class="subtitle">
 		What we’re up to; what we’re into. If you suffer from FOMO, check out below.
 	</p>
 	<section class="services mt-6">
 		<h2 class="service">Branding</h2>
-		<h2 class="service">Mobile & Web Development</h2>
+		<h2 class="service">Mobile & Web Dev.</h2>
 		<h2 class="service">Photography</h2>
 		<h2 class="service">Graphic Design</h2>
 	</section>
@@ -42,6 +42,6 @@
 
 <style>
 	.service {
-		@apply font-display text-[28px] mt-1 first:mt-0 whitespace-nowrap;
+		@apply font-display text-4xl mt-1 first:mt-0;
 	}
 </style>

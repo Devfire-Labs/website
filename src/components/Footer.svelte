@@ -1,43 +1,38 @@
 <script>
-  import { Link } from "yrv";
-  import SocialIconsLight from "./SocialIconsLight.svelte";
+	import { Link } from 'yrv';
+	import SocialIconsLight from './SocialIconsLight.svelte';
 </script>
 
-<div class="footer">
-  <img
-    src="/assets/FireLogoAlone.svg"
-    alt="The DevFire Labs logo"
-    class="block"
-  />
-
-  <div class="mt-9">
-    <SocialIconsLight />
-  </div>
-
-  <div class="flex flex-col items-start pt-2">
-    <h1 class="subtitle">Company</h1>
-    <Link href="/about" class="footer-link">About Us</Link>
-    <Link href="" class="footer-link">Contact & Support</Link>
-    <h1 class="subtitle">Services</h1>
-
-    <Link href="" class="footer-link">Services</Link>
-    <Link href="" class="footer-link">Our Work</Link>
-
-    <Link href="" class="mt-6 footer-link">Cookie & Privacy Policy</Link>
-    <p class="mt-4 font-sans text-md text-fire-1">
-      © 2021 DevFire Labs All rights reserved.
-    </p>
-  </div>
+<div class="bg-deepgray">
+	<div class="max-w-screen-2xl pt-6 pl-6 pb-4 text-white mx-auto">
+		<img
+			src="/assets/FireLogoAlone.svg"
+			alt="The DevFire Labs logo"
+			class="block"
+		/>
+		<div class="mt-9">
+			<SocialIconsLight />
+		</div>
+		<div class="flex flex-col items-start pt-2">
+			<h1 class="subtitle">Company</h1>
+			<Link href="/about" class="footer-link">About Us</Link>
+			<Link href="" class="footer-link">Contact & Support</Link>
+			<h1 class="subtitle">Services</h1>
+			<Link href="" class="footer-link">Services</Link>
+			<Link href="" class="footer-link">Our Work</Link>
+			<Link href="" class="mt-6 footer-link">Cookie & Privacy Policy</Link>
+			<p class="mt-4 font-sans text-md text-fire-1">
+				© 2021 DevFire Labs All rights reserved.
+			</p>
+		</div>
+	</div>
 </div>
 
 <style>
-  .footer {
-    @apply bg-deepgray pt-6 pl-6 pb-4 text-white;
-  }
-  .subtitle {
-    @apply text-2xl font-display mt-4;
-  }
-  :global(.footer-link) {
-    @apply mt-2 font-sans font-light;
-  }
+	.subtitle {
+		@apply text-2xl font-display mt-4;
+	}
+	:global(.footer-link) {
+		@apply mt-2 font-sans font-light;
+	}
 </style>
