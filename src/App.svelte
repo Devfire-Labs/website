@@ -38,10 +38,20 @@
 	@tailwind components;
 	@tailwind utilities;
 	body {
-		@apply font-mono bg-light antialiased;
+		@apply font-mono bg-light antialiased flex flex-col h-screen;
 	}
 	::selection {
 		@apply text-dark  bg-fire-1 bg-opacity-60;
+	}
+	input,
+	textarea {
+		@apply border-none;
+	}
+	:global(input[type='text']:focus),
+	:global(input[type='email']:focus),
+	:global(input[type='checkbox']:focus),
+	:global(textarea:focus) {
+		@apply outline-none ring ring-dark rounded-sm;
 	}
 	main.container {
 		@apply w-full max-w-screen-2xl mx-auto;
@@ -58,8 +68,5 @@
 	}
 	.post-text {
 		@apply font-sans mt-2;
-	}
-
-	.container {
 	}
 </style>
