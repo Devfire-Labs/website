@@ -13,9 +13,9 @@
 </script>
 
 <Router path="/">
-	<Navbar />
-	<Menu />
 	<main class="container">
+		<Menu />
+		<Navbar />
 		<Route exact><Home /></Route>
 		<Route exact path="/blog"><Blog /></Route>
 		<Route path="/blog/:postId" let:router>
@@ -29,8 +29,8 @@
 		<Route path="/hit-us-up"><HitUsUp /></Route>
 		<Route exact path="/about"><AboutUs /></Route>
 		<Route fallback>Not found</Route>
+		<Footer />
 	</main>
-	<Footer />
 </Router>
 
 <style global>
@@ -44,14 +44,10 @@
 		@apply text-dark  bg-fire-1 bg-opacity-60;
 	}
 	main.container {
-		@apply w-full max-w-screen-2xl mx-auto;
+		@apply w-full;
 	}
 	.title {
-		@apply text-5xl font-display mt-16 md:text-[120px];
-		line-height: 100%;
-	}
-	.subtitle {
-		@apply font-mono pr-8 ml-2 text-lg leading-tight mt-2 md:w-2/5 md:ml-2 md:mt-4;
+		@apply text-4xl font-display mt-16;
 	}
 	.post-subtitle {
 		@apply font-sans font-semibold text-xl mt-3.5;

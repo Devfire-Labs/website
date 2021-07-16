@@ -65,7 +65,7 @@
 		@apply font-sans font-semibold mt-5 block;
 	}
 	.text-input {
-		@apply block h-10 w-full mt-1.5 p-1.5 border-none focus:outline-none focus:ring focus:ring-dark focus:rounded-sm;
+		@apply block h-10 w-full mt-1.5 p-1.5;
 	}
 	.textarea-input {
 		@apply h-28;
@@ -74,7 +74,7 @@
 		@apply font-sans font-semibold text-sm mt-4 flex items-center;
 	}
 	.checkbox-input {
-		@apply mr-2 focus:ring-dark focus:rounded-sm;
+		@apply mr-2;
 	}
 
 	.submit-btn {

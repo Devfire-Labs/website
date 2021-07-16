@@ -16,7 +16,7 @@
 
 <style>
 	#home :global(.home-section-title) {
-		@apply text-3xl font-bold font-mono mb-4 md:text-5xl md:px-3;
+		@apply text-3xl font-bold font-mono md:text-5xl md:px-3;
 	}
 	#home :global(.home-section) {
 		@apply px-5 mt-6 md:px-8 md:mt-6;
