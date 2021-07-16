@@ -28,25 +28,24 @@
 			>
 		</div>
 	</div>
-
-	<div class="ml-8 mt-6 bg-light">
-		{#each options as { name, href }, i (i)}
-			<Link {href} class="menu-item" on:click={menu.toggle}>{name}</Link>
-		{/each}
-	</div>
-
-	<Link href="/hit-us-up" class="contact-us" on:click={menu.toggle}>
-		Contact Us<img src="/assets/msg-icon.svg" alt="" class="msg-icon" />
-	</Link>
-
-	<div class="ml-9 mt-28">
-		<SocialIcons />
-	</div>
-	<div class="mt-10 ml-9">
-		<Link href="" class="menu-copyright">Cookie & Privacy Policy</Link>
-		<p class="menu-copyright">
-			© 2021 DevFire Labs <br />All rights reserved.
-		</p>
+	<div class="flex flex-col flex-grow-0 items-start justify-start">
+		<div class="ml-8 mt-6 bg-light">
+			{#each options as { name, href }, i (i)}
+				<Link {href} class="menu-item" on:click={menu.toggle}>{name}</Link>
+			{/each}
+		</div>
+		<Link href="/hit-us-up" class="contact-us" on:click={menu.toggle}>
+			Contact Us<img src="/assets/msg-icon.svg" alt="" class="msg-icon" />
+		</Link>
+		<div class="ml-9 mt-28">
+			<SocialIcons />
+		</div>
+		<div class="mt-10 ml-9">
+			<Link href="" class="menu-copyright">Cookie & Privacy Policy</Link>
+			<p class="menu-copyright">
+				© 2021 DevFire Labs <br />All rights reserved.
+			</p>
+		</div>
 	</div>
 </div>
 
@@ -60,11 +59,9 @@
 	.open {
 		@apply w-full;
 		height: 100vh;
-
-		/* right: 0; */
 	}
 	:global(.contact-us) {
-		@apply bg-fire-1 flex items-center justify-between w-44 py-1 px-1.5 font-display text-2xl ml-8 mt-9;
+		@apply bg-fire-1 flex flex-grow-0 items-center py-1.5 px-2 font-display text-2xl ml-8 mt-9;
 	}
 	:global(.msg-icon) {
 		@apply stroke-current stroke-2 ml-2 w-7 h-7 stroke-current text-dark;
