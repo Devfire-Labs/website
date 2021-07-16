@@ -4,27 +4,30 @@
 	import { fade } from 'svelte/transition';
 	import SocialIcons from './SocialIcons.svelte';
 	import Logo from './Logo.svelte';
+	import { menuOptions as options } from '../utils';
 
 	router.subscribe((e) => {
 		console.log(e);
 	});
-
-	const options = [
-		{ name: 'Our Work', href: '/ourwork' },
-		{ name: 'About', href: '/about' },
-		{ name: 'Blog', href: '/blog' },
-	];
 </script>
 
-<div class="menu" class:open={$menu} id="menu" transition:fade>
+<div id="menu" class="menu lg:hidden" class:open={$menu} transition:fade>
 	<div class="flex items-center justify-between pb-2 mx-5 mt-7 ">
 		<Logo on:click={menu.toggle} />
 		<div class="flex items-center">
 			<button class=""
-				><img src="/assets/moon.svg" alt="A dark mode icon" class="" /></button
+				><img
+					src="/assets/moon.svg"
+					alt="A dark mode icon"
+					class="icon"
+				/></button
 			>
 			<button class="" on:click={menu.toggle}
-				><img src="/assets/x.svg" alt="A close icon" class="ml-4" /></button
+				><img
+					src="/assets/x.svg"
+					alt="A close icon"
+					class="icon ml-4 md:ml-8"
+				/></button
 			>
 		</div>
 	</div>
@@ -60,26 +63,28 @@
 		@apply w-full;
 		height: 100vh;
 	}
-	:global(.contact-us) {
-		@apply bg-fire-1 flex flex-grow-0 items-center py-1.5 px-2 font-display text-2xl ml-8 mt-9;
+	#menu :global(.contact-us) {
+		@apply bg-fire-1 flex flex-grow-0 items-center py-1.5 px-2 md:py-2.5 md:px-4 font-display text-2xl md:text-3xl ml-8 mt-9;
 	}
-	:global(.msg-icon) {
+	#menu :global(.msg-icon) {
 		@apply stroke-current stroke-2 ml-2 w-7 h-7 stroke-current text-dark;
 	}
-	:global(.menu-item) {
-		@apply text-4xl font-display text-dark block;
+	#menu :global(.menu-item) {
+		@apply text-4xl md:text-6xl font-display text-dark block;
 	}
-	:global(.menu-item + .menu-item) {
+	#menu :global(.menu-item + .menu-item) {
 		@apply mt-4;
 	}
-
+	.icon {
+		@apply w-9;
+	}
 	.social-icon {
 		@apply stroke-current fill-current text-dark;
 	}
-	:global(.menu-copyright) {
+	#menu :global(.menu-copyright) {
 		@apply font-sans font-medium;
 	}
-	:global(.menu-copyright + .menu-copyright) {
+	#menu :global(.menu-copyright + .menu-copyright) {
 		@apply mt-2 font-normal;
 	}
 </style>
