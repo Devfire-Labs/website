@@ -1,5 +1,5 @@
 <div
-  class="mb-4 ml-5 mr-6 md:ml-8 lg:ml-12 lg:mr-12 md:mr-8 mt-7 xl:ml-20 xl:mr-20 xl:mt-16 xl:mb-24"
+  class="mb-4 ml-5 mr-6 md:ml-8 lg:ml-12 lg:mr-12 md:mr-8 md:mb-20 mt-7 xl:ml-20 xl:mr-20 xl:mt-16 xl:mb-24"
 >
   <h1 class="header ">Cookies Policy</h1>
   <h2 class="date">Updated 27, Feb - 2021</h2>
