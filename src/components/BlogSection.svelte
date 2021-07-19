@@ -3,9 +3,9 @@
 	import { blog as content } from '../utils';
 </script>
 
-<section id="blog-section" class="home-section">
+<section id="blog-section" class="home-section lg:px-20 2xl:px-0">
 	<h2 class="home-section-title">blog</h2>
-	{#each content as { title, body }, i (i)}
+	{#each content as { title, description }, i (i)}
 		<Link href={`/blog/${i}`} class="">
 			<div
 				class="blog-post block border-black border-b px-2 py-3"
@@ -19,7 +19,7 @@
 				<p
 					class="leading-tight font-bold font-mono text-scroll md:text-2xl md:text-white text-lg mt-1.5 md:mt-16"
 				>
-					{@html body}
+					{@html description}
 				</p>
 			</div>
 		</Link>
@@ -32,9 +32,6 @@
 </section>
 
 <style>
-	/* #blog-section :global(.blog-post:first-child) {
-	} */
-
 	.first-blog-post {
 		border-top: 1px solid black;
 	}

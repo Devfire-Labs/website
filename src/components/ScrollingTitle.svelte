@@ -74,7 +74,7 @@
 	}
 	.carousel-inner > div {
 		@apply flex;
-		animation: scrollText 5s infinite linear;
+		animation: scrollText 10s infinite linear;
 	}
 	.text {
 		@apply text-9xl md:text-10xl lg:text-11xl xl:text-12xl 2xl:text-13xl font-mono font-bold;

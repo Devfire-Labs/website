@@ -8,11 +8,11 @@
 		<!-- newsletter section -->
 		<div class="hidden md:block lg:mt-0 lg:mb-4">
 			<h1
-				class="inline-block pb-5 md:text-xl lg:text-2xl md:pb-3 font-display md:px-0"
+				class="subtitle inline-block pb-5 md:text-xl lg:text-2xl md:pb-3 font-display md:px-0 ml-0 xl:ml-0 2xl:ml-0"
 			>
 				Newsletter
 			</h1>
-			<div class="group">
+			<div class="xl:flex">
 				<label
 					><input
 						class="border-none"
@@ -20,7 +20,7 @@
 						placeholder="Enter email"
 					/></label
 				>
-				<button class="block w-full text-black font-display bg-fire-1 md:py-1.5"
+				<button class="block w-full text-black font-display bg-fire-1 md:py-1.5 xl:px-4 xl:py-2"
 					>Get Started</button
 				>
 			</div>
@@ -81,14 +81,13 @@
 
 <style>
 	.footer {
-		@apply bg-deepgray max-w-screen-2xl py-6 text-white lg:mx-auto w-full md:flex md:justify-between md:px-6;
+		@apply bg-deepgray max-w-screen-2xl py-6 text-white lg:mx-auto w-full md:flex md:justify-between md:px-6 xl:px-20;
 	}
 	.cookies {
 		@apply font-sans text-sm lg:text-lg font-light text-white;
 	}
-
 	.hidden-box {
-		@apply hidden md:flex justify-between items-center max-w-screen-2xl mx-auto py-3 px-6;
+		@apply hidden md:flex justify-between items-center max-w-screen-2xl mx-auto py-3 px-6 xl:px-20;
 	}
 
 	.socials {
@@ -100,9 +99,9 @@
 	}
 
 	.subtitle {
-		@apply md:text-xl lg:text-2xl font-display mt-4 whitespace-nowrap;
+		@apply md:text-xl lg:text-2xl 2xl:text-3xl font-display mt-4 whitespace-nowrap;
 	}
 	:global(.footer-link) {
-		@apply mt-2 font-sans font-light md:text-lg ml-3 block;
+		@apply mt-2 2xl:mt-4 font-sans font-light md:text-lg ml-3 block 2xl:text-xl;
 	}
 </style>

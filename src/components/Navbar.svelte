@@ -7,7 +7,7 @@
 
 <nav id="nav" class=" bg-light w-full">
 	<div
-		class="flex items-center justify-between px-5 pb-2 pt-7 mx-auto max-w-screen-2xl"
+		class="flex items-center justify-between px-5 xl:px-20 2xl:px-0 pb-2 pt-7 mx-auto max-w-screen-2xl"
 	>
 		<Logo />
 		<button class="lg:hidden " on:click={menu.toggle}
@@ -32,7 +32,7 @@
 
 <style>
 	#nav :global(.menu-item) {
-		@apply text-2xl font-display ml-10;
+		@apply text-2xl font-display ml-10 2xl:text-3xl;
 		letter-spacing: 2%;
 	}
 	#nav :global(.first-menu-item) {

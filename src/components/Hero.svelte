@@ -1,4 +1,4 @@
-<section class="mt-12">
+<section class="mt-12 lg:px-20 2xl:px-0">
 	<div class="md:flex-row md:flex">
 		<h1
 			class="relative pl-6 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-display"
