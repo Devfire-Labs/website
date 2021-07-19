@@ -1,5 +1,6 @@
 <script>
   import { Router, Route, Link, router } from "yrv/debug";
+  import Projects from "./pages/Project.svelte";
   import Project from "./pages/Project.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Home from "./pages/Home.svelte";
@@ -28,6 +29,7 @@
     </Route>
     <Route path="/cookies"><CookiesPolicy /></Route>
     <Route path="/hit-us-up"><HitUsUp /></Route>
+    <Route exact path="/projects"><Projects /></Route>
     <Route exact path="/about"><AboutUs /></Route>
     <Route fallback>Not found</Route>
   </main>
