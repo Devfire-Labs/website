@@ -19,7 +19,7 @@
 		@apply text-3xl font-bold font-mono mb-4 md:text-5xl md:px-3 xl:text-6xl xl:mb-6 xl:mt-8 2xl:text-7xl 2xl:mb-8 2xl:mt-12;
 	}
 
-	/* #home :global(.home-section) {
-		@apply px-5 mt-6 md:px-8 md:mt-6;
-	} */
+	#home :global(.home-section) {
+		@apply px-4 mt-6 md:px-8 md:mt-12 lg:px-20 2xl:px-0 2xl:mt-16;
+	}
 </style>

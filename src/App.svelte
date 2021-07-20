@@ -1,75 +1,75 @@
 <script>
-  import { Router, Route, Link, router } from "yrv/debug";
-  import Projects from "./pages/Project.svelte";
-  import Project from "./pages/Project.svelte";
-  import Navbar from "./components/Navbar.svelte";
-  import Home from "./pages/Home.svelte";
-  import Footer from "./components/Footer.svelte";
-  import Menu from "./components/Menu.svelte";
-  import HitUsUp from "./pages/HitUsUp.svelte";
-  import Blog from "./pages/Blog.svelte";
-  import BlogPost from "./pages/BlogPost.svelte";
-  import AboutUs from "./pages/AboutUs.svelte";
-  import OurWork from "./pages/OurWork.svelte";
-  import CookiesPolicy from "./pages/CookiesPolicy.svelte";
+	import { Router, Route, Link, router } from 'yrv/debug';
+	import Projects from './pages/Project.svelte';
+	import Project from './pages/Project.svelte';
+	import Navbar from './components/Navbar.svelte';
+	import Home from './pages/Home.svelte';
+	import Footer from './components/Footer.svelte';
+	import Menu from './components/Menu.svelte';
+	import HitUsUp from './pages/HitUsUp.svelte';
+	import Blog from './pages/Blog.svelte';
+	import BlogPost from './pages/BlogPost.svelte';
+	import AboutUs from './pages/AboutUs.svelte';
+	import OurWork from './pages/OurWork.svelte';
+	import CookiesPolicy from './pages/CookiesPolicy.svelte';
 </script>
 
 <Router path="/">
-  <Navbar />
-  <Menu />
-  <main class="container">
-    <Route exact><Home /></Route>
-    <Route exact path="/blog"><Blog /></Route>
-    <Route path="/blog/:postId" let:router>
-      <BlogPost postId={router.params.postId} />
-    </Route>
-    <Route exact path="/ourwork"><OurWork /></Route>
-    <Route path="/ourwork/:postId" let:router>
-      <Project postId={router.params.postId} />
-    </Route>
-    <Route path="/cookies"><CookiesPolicy /></Route>
-    <Route path="/hit-us-up"><HitUsUp /></Route>
-    <Route exact path="/projects"><Projects /></Route>
-    <Route exact path="/about"><AboutUs /></Route>
-    <Route fallback>Not found</Route>
-  </main>
-  <Footer />
+	<Navbar />
+	<Menu />
+	<main class="container">
+		<Route exact><Home /></Route>
+		<Route exact path="/blog"><Blog /></Route>
+		<Route path="/blog/:postId" let:router>
+			<BlogPost postId={router.params.postId} />
+		</Route>
+		<Route exact path="/ourwork"><OurWork /></Route>
+		<Route path="/ourwork/:postId" let:router>
+			<Project postId={router.params.postId} />
+		</Route>
+		<Route path="/cookies"><CookiesPolicy /></Route>
+		<Route path="/hit-us-up"><HitUsUp /></Route>
+		<Route exact path="/projects"><Projects /></Route>
+		<Route exact path="/about"><AboutUs /></Route>
+		<Route fallback>Not found</Route>
+	</main>
+	<Footer />
 </Router>
 
 <style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  body {
-    @apply font-mono bg-light antialiased flex flex-col h-screen;
-  }
-  ::selection {
-    @apply text-dark  bg-fire-1 bg-opacity-60;
-  }
-  input,
-  textarea {
-    @apply border-none;
-  }
-  :global(input[type="text"]:focus),
-  :global(input[type="email"]:focus),
-  :global(input[type="checkbox"]:focus),
-  :global(textarea:focus) {
-    @apply outline-none ring ring-dark rounded-sm;
-  }
-  main.container {
-    @apply w-full max-w-screen-2xl mx-auto;
-  }
-  .title {
-    @apply text-5xl font-display mt-16 md:text-[120px];
-    line-height: 100%;
-  }
-  .subtitle {
-    @apply font-mono pr-8 ml-2 text-lg leading-tight mt-2 md:w-2/5 md:ml-2 md:mt-4;
-  }
-  .post-subtitle {
-    @apply font-sans font-semibold text-xl mt-3.5;
-  }
-  .post-text {
-    @apply font-sans mt-2;
-  }
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	body {
+		@apply font-mono bg-light antialiased flex flex-col h-screen;
+	}
+	::selection {
+		@apply text-dark  bg-fire-1 bg-opacity-60;
+	}
+	input,
+	textarea {
+		@apply border-none;
+	}
+	:global(input[type='text']:focus),
+	:global(input[type='email']:focus),
+	:global(input[type='checkbox']:focus),
+	:global(textarea:focus) {
+		@apply outline-none ring ring-dark rounded-sm;
+	}
+	main.container {
+		@apply w-full max-w-screen-2xl mx-auto;
+	}
+	.title {
+		@apply text-5xl font-display mt-16 lg:mt-20 md:text-9xl 2xl:text-10xl 2xl:mt-24;
+		line-height: 100%;
+	}
+	.subtitle {
+		@apply font-mono pr-4 pl-2 ml-2 text-lg mt-2 md:w-2/5 md:ml-2 md:mt-4 md:text-xl lg:text-2xl xl:text-3xl xl:mt-6;
+	}
+	.post-subtitle {
+		@apply font-sans font-semibold text-xl mt-3.5;
+	}
+	.post-text {
+		@apply font-sans mt-2;
+	}
 </style>
