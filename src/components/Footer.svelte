@@ -3,7 +3,7 @@
 	import SocialIconsLight from './SocialIconsLight.svelte';
 </script>
 
-<div class="bg-deepgray mt-auto">
+<div class="mt-auto bg-deepgray">
 	<div class="footer">
 		<!-- newsletter section -->
 		<div class="hidden md:block lg:mt-0 lg:mb-4">
@@ -20,7 +20,8 @@
 						placeholder="Enter email"
 					/></label
 				>
-				<button class="block w-full text-black font-display bg-fire-1 md:py-1.5 xl:px-4 xl:py-2"
+				<button
+					class="block w-full text-black font-display bg-fire-1 md:py-1.5 xl:px-4 xl:py-2"
 					>Get Started</button
 				>
 			</div>
@@ -30,21 +31,21 @@
 		<img
 			src="/assets/FireLogoAlone.svg"
 			alt="The DevFire Labs logo"
-			class="block md:hidden ml-2"
+			class="block ml-4 md:hidden"
 		/>
 
 		<!-- social Icons -->
 		<div
-			class="mt-7 md:mt-0 md:ml-0 md:flex-col md:items-center order-first md:order-3"
+			class="order-first mt-7 md:mt-0 md:ml-0 md:flex-col md:items-center md:order-3"
 		>
-			<h1 class="subtitle mb-3.5">Follow Us:</h1>
+			<h1 class=" mb-3.5 follow-us">Follow Us:</h1>
 			<div class="ml-3">
 				<SocialIconsLight classes={'mr-5 md:mr-8'} />
 			</div>
 		</div>
 
 		<!-- company -->
-		<div class="pt-2 md:pt-0 md:mr-30 lg:mr-12">
+		<div class="pt-2 md:pt-0 md:mr-30 lg:ml-4 lg:mr-12 xl:ml-12">
 			<h1 class="subtitle">Company</h1>
 			<Link href="/about" class="footer-link">About Us</Link>
 			<Link href="" class="footer-link">Contact & Support</Link>
@@ -73,35 +74,45 @@
 				alt="The DevFire Labs logo"
 				class=""
 			/>
-			<a href="" class="cookies"> Cookie & Privacy Policy </a>
-			<h1 class="rights">© 2021 DevFire Labs All rights reserved.</h1>
+			<div class="flex">
+				<a href="" class="cookies mr-6 lg:mr-8 xl:mr-14">
+					Cookie & Privacy Policy
+				</a>
+				<h1 class="rights">© 2021 DevFire Labs All rights reserved.</h1>
+			</div>
 		</div>
 	</div>
 </div>
 
 <style>
+	.logo {
+		@apply lg:ml-4 xl:ml-20;
+	}
+
 	.footer {
-		@apply bg-deepgray max-w-screen-2xl py-6 text-white lg:mx-auto w-full md:flex md:justify-between md:px-6 xl:px-20;
+		@apply bg-deepgray max-w-screen-2xl py-6 text-white lg:mx-auto w-full md:flex md:justify-between md:px-6 px-6 xl:px-20;
 	}
 	.cookies {
-		@apply font-sans text-sm lg:text-lg font-light text-white;
+		@apply font-sans text-sm font-light text-white;
 	}
+
 	.hidden-box {
 		@apply hidden md:flex justify-between items-center max-w-screen-2xl mx-auto py-3 px-6 xl:px-20;
 	}
 
-	.socials {
-		@apply hidden mt-9 md:mt-4 md:pr-10 md:flex-col lg:ml-0 lg:mr-6 md:flex md:items-center;
-	}
-
 	.rights {
-		@apply font-sans text-sm lg:text-lg font-light text-white;
+		@apply font-sans text-sm font-light text-white;
 	}
 
 	.subtitle {
-		@apply md:text-xl lg:text-2xl 2xl:text-3xl font-display mt-4 whitespace-nowrap;
+		@apply md:text-xl lg:text-2xl font-display mt-4 whitespace-nowrap;
 	}
+
+	.follow-us {
+		@apply md:text-center md:text-xl lg:text-2xl font-display mt-4 ml-2 text-lg whitespace-nowrap;
+	}
+
 	:global(.footer-link) {
-		@apply mt-2 2xl:mt-4 font-sans font-light md:text-lg ml-3 block 2xl:text-xl;
+		@apply mt-2 font-sans font-light md:text-lg ml-3 block;
 	}
 </style>
