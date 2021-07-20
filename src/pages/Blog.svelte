@@ -10,7 +10,7 @@
 	<p class="subtitle">
 		What we’re up to; what we’re into. If you suffer from FOMO, check out below.
 	</p>
-	<div class="post-wrapper md:grid md:grid-cols-2 md:gap-10">
+	<div class="post-wrapper md:grid md:grid-cols-2 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
 		{#each posts as { img, title, description, body, date }, i (i)}
 			<Link href={'/blog/' + i} class={`link ` + (i === 0 && 'first')}>
 				<img
@@ -20,18 +20,21 @@
 					class:first-post-img={i === 0}
 				/>
 				<div class="">
-					<p class="md:my-2" class:first-readtime={i === 0}>
+					<p
+						class="md:my-2 lg:my-4 md:text-lg lg:text-xl xl:text-2xl"
+						class:first-readtime={i === 0}
+					>
 						{dayjs(date).format('DD MMMM, YYYY')} &middot; {readingTime(body)} min
 						read.
 					</p>
 					<h2
-						class="font-medium text-lg md:text-xl whitespace-normal"
+						class="font-medium text-lg md:text-2xl lg:text-3xl xl:text-4xl whitespace-normal"
 						class:first-title={i === 0}
 					>
 						{title}
 					</h2>
 					<p
-						class=" hidden md:block pr-4 md:leading-tight md:mt-1.5"
+						class="hidden md:block pr-4 md:leading-tight md:mt-1.5 md:text-lg lg:text-xl xl:text-2xl"
 						class:first-description={i === 0}
 					>
 						{description}
