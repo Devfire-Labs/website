@@ -5,12 +5,13 @@
 		>
 			Reliable software solutions, <br /> a
 			<u>click</u>
-			<img
+			<!-- <img
 				src="/assets/click.svg"
 				alt="A pointer"
-				class="absolute filter drop-shadow-lg bottom-12 left-44 lg:bottom-32 lg:left-48 xl:bottom-48 xl:left-60 xl:w-20 "
+				class="absolute filter drop-shadow-lg bottom-12 left-44 lg:bottom-32 lg:left-48 xl:bottom-48 xl:left-60 xl:w-20 2xl:left-64 2xl:bottom-32"
 			/>
-			<br /> away.
+			  --><br
+			/> away.
 		</h1>
 		<img
 			src="/assets/hero-img.jpg"
