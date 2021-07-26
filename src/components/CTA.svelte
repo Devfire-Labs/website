@@ -1,17 +1,27 @@
 <script>
+	import { getContext } from 'svelte';
+
 	import { Link } from 'yrv';
+	import { darkMode } from '../stores/darkMode';
 	export let float;
+	const { fireVariant, textColor } = getContext('color');
 </script>
 
-<Link href="/hit-us-up" button class={'cta ' + (float && 'float')}>
-	<span class="hmu">HIT</span> <span class="hmu">US</span>
-	<span class="hmu">UP</span>
+<Link
+	href="/hit-us-up"
+	button
+	class={'cta ' + (float && 'float')}
+	style="background-color: {$fireVariant}; color: {$textColor};"
+	><div class="">
+		<span class="hmu">HIT</span> <span class="hmu">US</span>
+		<span class="hmu">UP</span>
+	</div>
 </Link>
 
 <style>
 	:global(.cta) {
 		letter-spacing: -0.2em;
-		@apply select-none font-bold text-2xl xl:text-3xl 2xl:text-5xl w-[120px] h-[120px] xl:w-[160px] xl:h-[160px] 2xl:w-[180px] 2xl:h-[180px] bg-fire-1 rounded-full p-2 2xl:p-4 whitespace-nowrap overflow-hidden bg-opacity-90;
+		@apply select-none font-bold text-2xl xl:text-3xl 2xl:text-5xl w-[120px] h-[120px] xl:w-[160px] xl:h-[160px] 2xl:w-[220px] 2xl:h-[220px]  rounded-full p-2 2xl:p-4 whitespace-nowrap overflow-hidden bg-opacity-90;
 	}
 	:global(.cta:focus:active) {
 		@apply transform scale-90 transition duration-100;

@@ -1,4 +1,5 @@
 <script>
+	import { onMount, setContext } from 'svelte';
 	import { Router, Route, Link, router } from 'yrv/debug';
 	import Projects from './pages/Project.svelte';
 	import Project from './pages/Project.svelte';
@@ -12,39 +13,49 @@
 	import AboutUs from './pages/AboutUs.svelte';
 	import OurWork from './pages/OurWork.svelte';
 	import CookiesPolicy from './pages/CookiesPolicy.svelte';
+	import { darkMode, bgColor, textColor, fireVariant } from './stores/darkMode';
+
+	$: {
+		$bgColor = $darkMode ? '#25262A' : '#B9B9B9';
+		$textColor = $darkMode ? 'white' : 'black';
+		$fireVariant = $darkMode ? '#953DBA' : '#D2E568';
+		setContext('color', { bgColor, textColor, fireVariant, darkMode });
+	}
 </script>
 
-<Router path="/">
-	<Navbar />
-	<Menu />
-	<main class="container">
-		<Route exact><Home /></Route>
-		<Route exact path="/blog"><Blog /></Route>
-		<Route path="/blog/:postId" let:router>
-			<BlogPost postId={router.params.postId} />
-		</Route>
-		<Route exact path="/ourwork"><OurWork /></Route>
-		<Route path="/ourwork/:postId" let:router>
-			<Project postId={router.params.postId} />
-		</Route>
-		<Route path="/cookies"><CookiesPolicy /></Route>
-		<Route path="/hit-us-up"><HitUsUp /></Route>
-		<Route exact path="/projects"><Projects /></Route>
-		<Route exact path="/about"><AboutUs /></Route>
-		<Route fallback>Not found</Route>
-	</main>
-	<Footer />
-</Router>
+<div class="transition-all duration-400" style="background-color: {$bgColor}; color: {$textColor};">
+	<Router path="/">
+		<Menu />
+		<Navbar />
+		<main class="container">
+			<Route exact><Home /></Route>
+			<Route exact path="/blog"><Blog /></Route>
+			<Route path="/blog/:postId" let:router>
+				<BlogPost postId={router.params.postId} />
+			</Route>
+			<Route exact path="/ourwork"><OurWork /></Route>
+			<Route path="/ourwork/:postId" let:router>
+				<Project postId={router.params.postId} />
+			</Route>
+			<Route path="/cookies"><CookiesPolicy /></Route>
+			<Route path="/hit-us-up"><HitUsUp /></Route>
+			<Route exact path="/projects"><Projects /></Route>
+			<Route exact path="/about"><AboutUs /></Route>
+			<Route fallback>Not found</Route>
+		</main>
+		<Footer />
+	</Router>
+</div>
 
 <style global>
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
 	body {
-		@apply font-mono bg-light antialiased flex flex-col h-screen;
+		@apply font-mono  dark:text-white antialiased flex flex-col h-screen;
 	}
 	::selection {
-		@apply text-dark  bg-fire-1 bg-opacity-60;
+		@apply text-dark  bg-fire-1 dark:bg-fire-2 dark:text-white bg-opacity-60;
 	}
 	input,
 	textarea {

@@ -1,16 +1,16 @@
 <script>
-	export let classes;
+	export let rightMargin;
 </script>
 
 <div class="flex items-start">
-	<button class={'social-icon ' + classes}
+	<button class={'social-icon ' + rightMargin}
 		><img
 			src="/assets/instagramLight.svg"
 			alt="DevFire Labs Instagram"
 			class=""
 		/></button
 	>
-	<button class={'social-icon ' + classes}
+	<button class={'social-icon ' + rightMargin}
 		><img
 			src="/assets/twitterLight.svg"
 			alt="DevFire Labs Twitter"

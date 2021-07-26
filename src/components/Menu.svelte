@@ -5,43 +5,67 @@
 	import SocialIcons from './SocialIcons.svelte';
 	import Logo from './Logo.svelte';
 	import { menuOptions as options } from '../utils';
+	import { getContext } from 'svelte';
+	import SocialIconsLight from './SocialIconsLight.svelte';
 
-	router.subscribe((e) => {
-		console.log(e);
-	});
+	const { bgColor, textColor, fireVariant, darkMode } = getContext('color');
 </script>
 
-<div id="menu" class="menu lg:hidden" class:open={$menu} transition:fade>
+<div
+	id="menu"
+	class="menu lg:hidden"
+	class:open={$menu}
+	transition:fade
+	style="background-color: {$bgColor}; color: {$textColor};"
+>
 	<div class="flex items-center justify-between pb-2 mx-5 mt-7 ">
 		<Logo on:click={menu.toggle} />
 		<div class="flex items-center">
-			<button class=""
+			<button class="" on:click={darkMode.toggle}
 				><img
-					src="/assets/moon.svg"
+					src={$darkMode ? '/assets/sun.svg' : '/assets/moon.svg'}
 					alt="A dark mode icon"
-					class="icon"
+					class="w-7"
 				/></button
 			>
 			<button class="" on:click={menu.toggle}
 				><img
-					src="/assets/x.svg"
+					src={$darkMode ? '/assets/x-dark.svg' : '/assets/x.svg'}
 					alt="A close icon"
-					class="icon ml-4 md:ml-8"
+					class="w-6 ml-4 md:ml-8 dark:text-white"
 				/></button
 			>
 		</div>
 	</div>
 	<div class="flex flex-col flex-grow-0 items-start justify-start">
-		<div class="ml-8 mt-6 bg-light">
+		<div class="ml-8 mt-6">
 			{#each options as { name, href }, i (i)}
-				<Link {href} class="menu-item" on:click={menu.toggle}>{name}</Link>
+				<Link
+					{href}
+					class="menu-item"
+					on:click={menu.toggle}
+					style="color:{$textColor}">{name}</Link
+				>
 			{/each}
 		</div>
-		<Link href="/hit-us-up" class="contact-us" on:click={menu.toggle}>
-			Contact Us<img src="/assets/msg-icon.svg" alt="" class="msg-icon" />
+		<Link
+			href="/hit-us-up"
+			class="contact-us"
+			on:click={menu.toggle}
+			style="background-color: {$fireVariant};"
+		>
+			Contact Us<img
+				src={$darkMode ? '/assets/msg-icon-dark.svg' : '/assets/msg-icon.svg'}
+				alt=""
+				class="msg-icon"
+			/>
 		</Link>
 		<div class="ml-9 mt-28">
-			<SocialIcons />
+			{#if $darkMode}
+				<SocialIconsLight rightMargin="mr-10" />
+			{:else}
+				<SocialIcons />
+			{/if}
 		</div>
 		<div class="mt-10 ml-9">
 			<Link href="" class="menu-copyright">Cookie & Privacy Policy</Link>
@@ -54,7 +78,7 @@
 
 <style>
 	.menu {
-		@apply w-0 h-0 overflow-hidden fixed bg-light z-40 overflow-x-hidden whitespace-nowrap text-dark right-0;
+		@apply w-0 h-0 overflow-hidden fixed  z-40 overflow-x-hidden whitespace-nowrap right-0;
 		transition: width 0.5s cubic-bezier(0.22, 0.68, 0, 1.71),
 			height 0.4s cubic-bezier(0.22, 0.68, 0, 1.71);
 	}
@@ -64,19 +88,19 @@
 		height: 100vh;
 	}
 	#menu :global(.contact-us) {
-		@apply bg-fire-1 flex flex-grow-0 items-center py-1.5 px-2 md:py-2.5 md:px-4 font-display text-2xl md:text-3xl ml-8 mt-9;
+		@apply flex flex-grow-0 items-center py-1.5 px-2 md:py-2.5 md:px-4 font-display text-2xl md:text-3xl ml-8 mt-9;
 	}
 	#menu :global(.msg-icon) {
 		@apply stroke-current stroke-2 ml-2 w-7 h-7 stroke-current text-dark;
 	}
 	#menu :global(.menu-item) {
-		@apply text-4xl md:text-6xl font-display text-dark block;
+		@apply text-4xl md:text-6xl font-display block;
 	}
 	#menu :global(.menu-item + .menu-item) {
 		@apply mt-4;
 	}
 	.icon {
-		@apply w-9;
+		@apply w-6;
 	}
 	.social-icon {
 		@apply stroke-current fill-current text-dark;

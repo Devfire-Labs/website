@@ -13,7 +13,7 @@
 		><div
 			class="font-mono font-bold mt-6 md:mt-2 md:ml-4 text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		>
-			More projects<span class="text-fire-1">...</span>
+			More projects<span class="text-fire-1 dark:text-fire-2">...</span>
 		</div></Link
 	>
 </section>

@@ -35,9 +35,9 @@
 						{@html body}
 					</p>
 					<div
-						class="font-mono font-bold mt-4 text-lg lg:text-2xl xl:mt-8 rounded-full border-2 border-fire-1 inline-block px-3 "
+						class="font-mono font-bold mt-4 text-lg lg:text-2xl xl:mt-8 rounded-full border-2 border-fire-1 dark:border-fire-2 inline-block px-3 "
 					>
-						Read more<span class="text-fire-1">...</span>
+						Read more<span class="text-fire-1 dark:text-fire-2">...</span>
 					</div>
 				</div>
 			</div>

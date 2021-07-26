@@ -3,6 +3,7 @@
 	import dayjs from 'dayjs';
 	import { readingTime } from '../utils';
 	import Link from 'yrv/build/dev/lib/Link.svelte';
+	import { darkMode } from '../stores/darkMode';
 </script>
 
 <div id="blog-page" class="px-4 mb-4 md:px-20">
@@ -10,7 +11,9 @@
 	<p class="subtitle">
 		What we’re up to; what we’re into. If you suffer from FOMO, check out below.
 	</p>
-	<div class="post-wrapper md:grid md:grid-cols-2 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
+	<div
+		class="post-wrapper md:grid md:grid-cols-2 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16"
+	>
 		{#each posts as { img, title, description, body, date }, i (i)}
 			<Link href={'/blog/' + i} class={`link ` + (i === 0 && 'first')}>
 				<img
@@ -44,11 +47,19 @@
 		{/each}
 	</div>
 	<div class="my-16">
-		<img src="/assets/online-presence.svg" alt="" class="  w-4/5 mx-auto" />
+		<img
+			src={$darkMode
+				? '/assets/online-presence-dark.svg'
+				: '/assets/online-presence.svg'}
+			alt=""
+			class="  w-4/5 mx-auto"
+		/>
 		<div class="flex justify-center mt-4 w-4/5 mx-auto">
 			<input type="text" class="border-none w-3/5" placeholder="Email" />
-			<button class="bg-fire-1 font-display px-4 w-2/5 text-sm"
-				>Get Started</button
+			<button
+				class="font-display px-4 w-2/5 text-sm"
+				class:bg-fire-1={!$darkMode}
+				class:bg-fire-2={$darkMode}>Get Started</button
 			>
 		</div>
 	</div>
