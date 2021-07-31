@@ -23,7 +23,10 @@
 	}
 </script>
 
-<div class="transition-all duration-400" style="background-color: {$bgColor}; color: {$textColor};">
+<div
+	class="transition-all duration-400"
+	style="background-color: {$bgColor}; color: {$textColor};"
+>
 	<Router path="/">
 		<Menu />
 		<Navbar />
