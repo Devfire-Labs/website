@@ -21,7 +21,9 @@
 		>
 		<div class="hidden lg:flex lg:items-center">
 			{#each options as { name, href }, i (i)}
-				<Link {href} class={'menu-item ' + (i === 0 && 'first-menu-item')}
+				<Link
+					{href}
+					class={'menu-item navlink-anim ' + (i === 0 && 'first-menu-item')}
 					>{name}</Link
 				>
 			{/each}

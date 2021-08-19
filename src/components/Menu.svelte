@@ -32,7 +32,7 @@
 				><img
 					src={$darkMode ? '/assets/x-dark.svg' : '/assets/x.svg'}
 					alt="A close icon"
-					class="w-6 ml-4 md:ml-8 dark:text-white"
+					class="w-6 ml-4 md:ml-8"
 				/></button
 			>
 		</div>
