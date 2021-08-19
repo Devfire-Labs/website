@@ -44,7 +44,8 @@
         alt: "Target Icon",
       },
 
-      description: "",
+      description:
+        "Full Stack Development \n We have proven experience working across a wide range of technologies, platforms and coding languages. Whether we’re focusing on the front-end of a project or offering back-end support, our full range of experience allows us to choose the specific tools and solutions that will work best for your unique business needs. \n \nUI\\UX Design \n Wire-framing and user experience (UX) sessions were prioritized in order to produce a site that reinforces trust, conveys important brand messages, and provides a return on investment in innovation. Our designs will set you apart from the competition and create an interesting and refreshing experience for your users. We make our code as minimal as possible while allowing our creative team to focus on the front end design.",
     },
   ];
 </script>
