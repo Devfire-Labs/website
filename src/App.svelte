@@ -23,7 +23,10 @@
 	}
 </script>
 
-<div class="transition-all duration-400" style="background-color: {$bgColor}; color: {$textColor};">
+<div
+	class="transition-all duration-400"
+	style="background-color: {$bgColor}; color: {$textColor};"
+>
 	<Router path="/">
 		<Menu />
 		<Navbar />
@@ -53,6 +56,13 @@
 	@tailwind utilities;
 	body {
 		@apply font-mono  dark:text-white antialiased flex flex-col h-screen;
+	}
+	a:active {
+		-webkit-tap-highlight-color: transparent; /* transparent with keyword */
+		@apply duration-150 transform scale-110;
+	}
+	.navlink-anim:hover {
+		@apply duration-150 border-b border-fire-2;
 	}
 	::selection {
 		@apply text-dark  bg-fire-1 dark:bg-fire-2 dark:text-white bg-opacity-60;

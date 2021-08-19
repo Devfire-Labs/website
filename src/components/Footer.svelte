@@ -6,11 +6,7 @@
 	const { darkMode } = getContext('color');
 </script>
 
-<div
-	class="mt-auto bg-deepgray dark:bg-black"
-	class:bg-deepgray={!$darkMode}
-	class:bg-black={$darkMode}
->
+<div class="mt-auto" class:bg-deepgray={!$darkMode} class:bg-black={$darkMode}>
 	<div class="footer">
 		<!-- newsletter section -->
 		<div class="hidden md:block lg:mt-0 lg:mb-4">
@@ -73,7 +69,11 @@
 		</div>
 	</div>
 
-	<div class="hidden-box-wrapper bg-onix dark:bg-black dark:border-t-2">
+	<div
+		class="hidden-box-wrapper bg-onix dark:bg-black dark:border-t-2"
+		class:bg-onix={!$darkMode}
+		class:bg-black={$darkMode}
+	>
 		<div class="hidden-box">
 			<!-- Don't show on mobile -->
 			<img

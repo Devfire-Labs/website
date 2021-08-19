@@ -22,8 +22,10 @@
 					{title}
 				</h3>
 				<p
-					class="leading-tight font-bold font-mono text-scroll dark:text-gray-300 md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-1.5 lg:mt-4 xl:mt-8"
-				>
+					class="leading-tight font-bold font-mono md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl mt-1.5 lg:mt-4 xl:mt-8"
+				class:text-scroll={!$darkMode}
+				class:text-gray-300={$darkMode}			
+	>
 					{@html description}
 				</p>
 			</div>
