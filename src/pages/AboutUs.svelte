@@ -45,7 +45,7 @@
       },
 
       description:
-        "Full Stack Development \n We have proven experience working across a wide range of technologies, platforms and coding languages. Whether we’re focusing on the front-end of a project or offering back-end support, our full range of experience allows us to choose the specific tools and solutions that will work best for your unique business needs. \n \nUI\\UX Design \n Wire-framing and user experience (UX) sessions were prioritized in order to produce a site that reinforces trust, conveys important brand messages, and provides a return on investment in innovation. Our designs will set you apart from the competition and create an interesting and refreshing experience for your users. We make our code as minimal as possible while allowing our creative team to focus on the front end design.",
+        "Full Stack Development \n We have proven experience working across a wide range of technologies, platforms and coding languages. Whether we’re focusing on the front-end of a project or offering back-end support, our full range of experience allows us to choose the specific tools and solutions that will work best for your unique business needs. \n \nUI\\UX Design \nOur designs will set you apart from the competition and create an interesting and refreshing experience for your users. We make our code as minimal as possible while allowing our creative team to focus on the front end design. \n \n Quality Assurance \n Easy-to-use review tools are included in our simplified QA process, making feedback pleasant and productive. Before and after launch, we'll make sure your bespoke solution works seamlessly across all devices and browsers.",
     },
   ];
 </script>
@@ -60,7 +60,8 @@
 <div class="py-6 text-center">
   <h1 class="text-4xl font-display">Let's Work Together</h1>
   <p class="mt-2 mb-4 ml-6 mr-6 font-mono text-xl">
-    If you want to work with us, check out our career opportunities.
+    No matter what your next move is, we'd love to hear about your brand and
+    business issues.
   </p>
   <div class="py-4 pb-6"><Cta /></div>
 </div>
