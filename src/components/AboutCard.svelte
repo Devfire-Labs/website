@@ -19,7 +19,7 @@
       <h1 class="titleText">{title}</h1>
       <img {src} {alt} class="w-8 h-8" />
     </div>
-    <p class="description">{description}</p>
+    <p class="description">{@html description}</p>
   </div>
 </div>
 
