@@ -1,32 +1,25 @@
 {
-	"name": "svelte-app",
-	"version": "1.0.0",
-	"private": true,
+	"name": "devfirelabs-website",
+	"version": "0.0.1",
 	"scripts": {
-		"build": "rollup -c",
-		"dev": "rollup -c -w",
-		"start": "sirv public --single --host"
+		"dev": "svelte-kit dev --host",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview"
 	},
 	"devDependencies": {
-		"@rollup/plugin-commonjs": "^17.0.0",
-		"@rollup/plugin-node-resolve": "^11.0.0",
-		"autoprefixer": "^9.8.6",
-		"postcss": "^7.0.36",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.34.0",
+		"postcss": "^8.3.5",
 		"postcss-load-config": "^3.1.0",
-		"rollup": "^2.3.4",
-		"rollup-plugin-css-only": "^3.1.0",
-		"rollup-plugin-livereload": "^2.0.0",
-		"rollup-plugin-svelte": "^7.0.0",
-		"rollup-plugin-terser": "^7.0.0",
-		"svelte": "^3.0.0",
-		"svelte-preprocess": "^4.7.3",
-		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+		"svelte-preprocess": "^4.7.4",
+		"autoprefixer": "^10.3.1",
+		"cssnano": "^5.0.6",
+		"tailwindcss": "^2.2.4"
 	},
+	"type": "module",
 	"dependencies": {
 		"@tailwindcss/forms": "^0.3.3",
 		"@tailwindcss/line-clamp": "^0.2.1",
-		"dayjs": "^1.10.6",
-		"sirv-cli": "^1.0.0",
-		"yrv": "0.0.47"
+		"dayjs": "^1.10.6"
 	}
 }
