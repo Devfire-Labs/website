@@ -3,6 +3,9 @@
 	import { ourWork as content } from '$lib/utils';
 </script>
 
+<svelte:head><title>devfirelabs - Our Work</title></svelte:head>
+
+
 <div id="ourwork" class="px-4 mb-12 md:px-20 xl:mb-16">
 	<h1 class="title">Our Work</h1>
 	<p class="subtitle">

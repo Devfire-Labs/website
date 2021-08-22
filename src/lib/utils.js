@@ -3,7 +3,7 @@ export const readingTime = (text) =>
 
 export const menuOptions = [
 	{ name: 'Our Work', href: '/our-work' },
-	{ name: 'About', href: '/about' },
+	{ name: 'About', href: '/about-us' },
 	{ name: 'Blog', href: '/blog' },
 ];
 

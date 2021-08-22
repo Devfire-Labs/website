@@ -9,6 +9,8 @@
 	};
 </script>
 
+<svelte:head><title>devfirelabs - Hit Us Up</title></svelte:head>
+
 <div class="hit-us-up ">
 	<!-- hit us up text and email -->
 	<header class="header">

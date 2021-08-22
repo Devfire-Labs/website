@@ -17,6 +17,8 @@
 	const { img, author, title, body, date } = post;
 </script>
 
+<svelte:head><title>devfirelabs - {title}</title></svelte:head>
+
 <div
 	id="blog-post"
 	class="mt-7 md:mt-10 xl:mt-16 px-4 md:px-6 lg:px-12 xl:px-24"

@@ -1,3 +1,6 @@
+<svelte:head><title>devfirelabs - Cookies &amp; Policy</title></svelte:head>
+
+
 <div
 	class="mb-4 ml-5 mr-6 md:ml-8 lg:ml-12 lg:mr-12 md:mr-8 md:mb-20 mt-7 xl:ml-20 xl:mr-20 xl:mt-16 xl:mb-24"
 >

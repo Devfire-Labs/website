@@ -11,6 +11,9 @@
 	const { title, type, body, imgCarousel } = post;
 </script>
 
+<svelte:head><title>devfirelabs - {title}</title></svelte:head>
+
+
 <div class="container mb-12 mr-2 mt-7 md:ml-2 md:mr-4 xl:ml-14">
 	<div class="px-4">
 		<h1 class="mt-10 text-3xl font-display md:text-4xl xl:text-6xl">{title}</h1>

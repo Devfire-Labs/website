@@ -5,6 +5,8 @@
 	import { darkMode } from '$lib/stores/darkMode';
 </script>
 
+<svelte:head><title>devfirelabs - Blog</title></svelte:head>
+
 <div id="blog-page" class="px-4 mb-4 md:px-20">
 	<h1 class="title">Blog</h1>
 	<p class="subtitle">

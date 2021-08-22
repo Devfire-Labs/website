@@ -50,6 +50,9 @@
 	];
 </script>
 
+<svelte:head><title>devfirelabs - About Us</title></svelte:head>
+
+
 <!-- cards -->
 {#each cards as { title, img, description }, i (i)}
 	<AboutCard {title} {img} {description} />

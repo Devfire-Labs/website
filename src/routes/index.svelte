@@ -6,6 +6,8 @@
 	import ScrollingTitle from '$lib/components/ScrollingTitle.svelte';
 </script>
 
+<svelte:head><title>devfirelabs - Home</title></svelte:head>
+
 <div id="home" class="">
 	<Hero />
 	<ScrollingTitle />
