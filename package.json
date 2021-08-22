@@ -2,7 +2,7 @@
 	"name": "devfirelabs-website",
 	"version": "0.0.1",
 	"engines": {
-		"node": "~14.17.0"
+		"node": "~10"
 	},
 	"scripts": {
 		"dev": "svelte-kit dev --host",
