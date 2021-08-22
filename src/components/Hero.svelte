@@ -1,15 +1,20 @@
-<section class="mt-4">
-	<h1 class="font-display text-6xl md:text-6xl relative pl-6">
-		Reliable software solutions, <br /> a
-		<u>click</u>
+<script>
+	import { darkMode } from '../stores/darkMode';
+</script>
+
+<section class="mt-12 lg:px-20 2xl:px-0">
+	<div class="md:flex-row md:flex">
 		<img
-			src="/assets/click.svg"
-			alt="A pointer"
-			class="filter drop-shadow-lg absolute bottom-12 left-44"
+			src={$darkMode ? '/assets/hero-text-dark.svg' : '/assets/hero-text.svg'}
+			alt=""
+			class="pl-6 pr-4 w-full md:w-4/5"
 		/>
-		<br /> away.
-	</h1>
-	<img src="/assets/hero-img.jpg" alt="" class="mt-6 mx-auto w-5/6 object-contain" />
+		<img
+			src={'/assets/hero-img.jpg'}
+			alt=""
+			class="object-contain w-5/6 mx-auto mt-6 md:mt-0 md:w-3/5 md:object-cover md:h-3/4 md:pr-6 md:mb-4"
+		/>
+	</div>
 </section>
 
 <style>

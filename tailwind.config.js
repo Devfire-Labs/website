@@ -9,7 +9,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			mono: ['Ubuntu Mono', 'monospace'],
-			sans: ['Montserrat', 'sans-serif'],
+			sans: ['Ubuntu', 'sans-serif'],
 			display: ['Righteous', 'cursive'],
 		},
 		extend: {
@@ -18,13 +18,20 @@ module.exports = {
 				'fire-2': '#953DBA',
 				light: '#B9B9B9',
 				dark: '#25262A',
-				deepGrey: '#797979',
+				onix: '#505050',
+				deepgray: '#797979',
 				scroll: '#555',
+			},
+			fontSize: {
+				'10xl': '10rem',
+				'11xl': '12rem',
+				'12xl': '14rem',
+				'13xl': '16rem',
 			},
 		},
 	},
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/forms')],
 };
