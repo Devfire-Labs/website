@@ -1,6 +1,6 @@
 <script>
 	import { darkMode } from '$lib/stores/darkMode';
-
+	export const prerender = true;
 	let form = {
 		name: '',
 		email: '',
@@ -30,6 +30,7 @@
 			console.log(form);
 		}}
 	>
+		<input type="form-name" class="hidden" />
 		<label for="" class="label"
 			>Name<input
 				type="text"
