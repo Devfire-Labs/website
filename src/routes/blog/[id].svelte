@@ -93,10 +93,10 @@
 </div>
 
 <style lang="postcss">
-	#blog-post :global(.back-link) {
+	.back-link {
 		@apply hidden font-semibold md:flex md:text-2xl xl:text-3xl 2xl:text-5xl;
 	}
-	#blog-post :global(.back-link > img) {
+	.back-link > img {
 		@apply rotate-180 mr-2 2xl:mr-4 xl:w-4 2xl:w-5;
 	}
 

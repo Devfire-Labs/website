@@ -52,7 +52,6 @@
 
 <svelte:head><title>devfirelabs - About Us</title></svelte:head>
 
-
 <!-- cards -->
 {#each cards as { title, img, description }, i (i)}
 	<AboutCard {title} {img} {description} />
@@ -85,7 +84,7 @@
 		@apply text-3xl font-display;
 	}
 
-	:global(.description) {
+	.description {
 		@apply pt-2 pr-4 font-sans text-lg;
 	}
 </style>

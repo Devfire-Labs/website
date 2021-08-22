@@ -62,7 +62,10 @@
 
 		<div class="flex flex-col items-start pt-2 md:hidden">
 			<a href="/cookies" class="mt-6 footer-link">Cookie & Privacy Policy</a>
-			<p class="mt-4 ml-2 font-sans text-md text-fire-1 dark:text-fire-2">
+			<p
+				class="mt-4 ml-2 font-sans text-md text-fire-1"
+				class:text-fire-2={$darkMode}
+			>
 				© 2021 DevFire Labs All rights reserved.
 			</p>
 		</div>
@@ -84,13 +87,13 @@
 				<a href="/cookies" class="mr-6 cookies lg:mr-8 xl:mr-14">
 					Cookie & Privacy Policy
 				</a>
-				<h1 class="rights">© 2021 DevFire Labs All rights reserved.</h1>
+				<p class="rights">© 2021 DevFire Labs All rights reserved.</p>
 			</div>
 		</div>
 	</div>
 </div>
 
-<style lang='postcss'>
+<style lang="postcss">
 	.logo {
 		@apply lg:ml-4 xl:ml-20;
 	}
@@ -118,7 +121,7 @@
 		@apply md:text-center md:text-xl lg:text-2xl font-display mt-4 ml-2 text-lg whitespace-nowrap;
 	}
 
-	:global(.footer-link) {
+	.footer-link {
 		@apply mt-2 font-sans font-light md:text-lg ml-4 block;
 	}
 </style>
