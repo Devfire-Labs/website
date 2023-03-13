@@ -7,7 +7,7 @@
 		"preview": "svelte-kit preview"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-netlify": "^1.0.0-next.9",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.88",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.3.1",
 		"cssnano": "^5.1.15",
