@@ -21,6 +21,6 @@
 	"dependencies": {
 		"@tailwindcss/forms": "^0.3.4",
 		"@tailwindcss/line-clamp": "^0.4.4",
-		"dayjs": "^1.10.6"
+		"dayjs": "^1.11.9"
 	}
 }
